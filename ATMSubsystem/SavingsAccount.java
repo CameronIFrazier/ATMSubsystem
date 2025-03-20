@@ -1,12 +1,10 @@
 package ATMSubsystem;
 
-import java.util.Date;
-
 public class SavingsAccount extends Account {
     private double interestRate;
     private double withdrawalLimit;
 
-    public SavingsAccount(int id, double balance, Date createDate, int status, double interestRate, double withdrawalLimit) {
+    public SavingsAccount(int id, double balance, long createDate, int status, double interestRate, double withdrawalLimit) {
         super(id, balance, createDate, status);
         this.interestRate = interestRate;
         this.withdrawalLimit = withdrawalLimit;

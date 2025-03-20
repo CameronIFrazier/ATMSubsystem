@@ -1,14 +1,12 @@
 package ATMSubsystem;
 
-import java.util.Date;
-
 public class Account {
     private int accountId;
     private double balance;
-    private Date createDate;
+    private long createDate;
     private int status;
 
-    public Account(int id, double balance, Date createDate, int status) {
+    public Account(int id, double balance, long createDate, int status) {
         this.accountId = id;
         this.balance = balance;
         this.createDate = createDate;
@@ -19,7 +17,7 @@ public class Account {
         return this.accountId;
     }
 
-    public Date getCreateDate() {
+    public long getCreateDate() {
         return this.createDate;
     }
 

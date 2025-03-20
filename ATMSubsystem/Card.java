@@ -4,13 +4,13 @@ import java.util.Date;
 
 public class Card {
     public int cardNumber;
-    public int pin;
+    public int ccv;
     public int status;
     public Date expiryDate;
 
-    public Card(int cardNumber, int pin, int status, Date expiryDate) {
+    public Card(int cardNumber, int ccv, int status, Date expiryDate) {
         this.cardNumber = cardNumber;
-        this.pin = pin;
+        this.ccv = ccv;
         this.status = status;
         this.expiryDate = expiryDate;
     }
@@ -19,13 +19,9 @@ public class Card {
         return this.cardNumber;
     }
 
-    public void setPin(int pin) {
-        this.pin = pin;
-    }
-
-    public int getPin() {
-        return this.pin;
-    }
+    public int getCCV() {
+        return this.ccv;
+    }   
 
     public void setStatus(int status) {
         this.status = status;

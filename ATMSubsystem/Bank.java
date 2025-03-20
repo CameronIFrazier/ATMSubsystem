@@ -1,50 +1,35 @@
 package ATMSubsystem;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Bank {
-    public int bankId;
-    public String name;
-    public String location;
-    public List<Account> accounts;
+    private static final String BANK_NAME = "Cal Poly Pomona Credit Union";
+    private static final String BANK_ADDRESS = "3801 W Temple Ave, Pomona, CA 91768";
+    private static final String BANK_PHONE = "(909) 869-7659";
 
-    public Bank(int id, String name, String location) {
-        this.bankId = id;
-        this.name = name;
-        this.location = location;
-        this.accounts = new ArrayList<>();
+    private int branchId;
+    private String branchLocation;
+
+    public Bank(int branchId, String branchLocation) {
+        this.branchId = branchId;
+        this.branchLocation = branchLocation;
     }
 
-    public int getID() {
-        return this.bankId;
+    public String getBankName() {
+        return BANK_NAME;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getBankAddress() {
+        return BANK_ADDRESS;
     }
 
-    public String getName() {
-        return this.name;
+    public String getBankPhone() {
+        return BANK_PHONE;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public int getBranchId() {
+        return this.branchId;
     }
 
-    public String getLocation() {
-        return this.location;
-    }
-
-    public void addAccount(Account account) {
-        this.accounts.add(account);
-    }
-
-    public void removeAccount(Account account) {
-        this.accounts.remove(account);
-    }
-
-    public List<Account> getAccounts() {
-        return this.accounts;
+    public String getBranchLocation() {
+        return this.branchLocation;
     }
 }

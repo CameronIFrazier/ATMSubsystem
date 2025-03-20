@@ -1,5 +1,6 @@
 package ATMSubsystem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Customer {
@@ -9,14 +10,16 @@ public class Customer {
     private String phone;
     private String email;
     private List<Account> accounts;
+    private Bank bank;
 
-    public Customer(int id, String name, String address, String phone, String email, List<Account> accounts) {
+    public Customer(int id, String name, String address, String phone, String email, Bank bank) {
         this.customerId = id;
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.email = email;
-        this.accounts = accounts;
+        this.accounts = new ArrayList<>();
+        this.bank = bank;
     }
 
     public int getId() {
@@ -66,6 +69,10 @@ public class Customer {
     public List<Account> listAccounts() {
         // Display all accounts associated with the customer
         return this.accounts;
+    }
+
+    public Bank getBank() {
+        return this.bank;
     }
 
     

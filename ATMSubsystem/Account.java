@@ -7,18 +7,20 @@ public class Account {
     private double balance;
     private Date createDate;
     private int status;
-    private Bank bank;
 
-    public Account(int id, double balance, int status, Bank bank) {
+    public Account(int id, double balance, Date createDate, int status) {
         this.accountId = id;
         this.balance = balance;
-        this.createDate = null; // Set the create date to the current date
+        this.createDate = createDate;
         this.status = status;
-        this.bank = bank;
     }
 
     public int getId() {
         return this.accountId;
+    }
+
+    public Date getCreateDate() {
+        return this.createDate;
     }
 
     public double getBalance() {
@@ -26,12 +28,14 @@ public class Account {
     }
 
     public double deposit(double amount) {
-        this.balance += amount;
+        this.balance += amount; // Update the balance locally
+        // Make call to the central bank database to update the balance in the database
         return this.balance;
     }
 
     public double withdraw(double amount) {
-        this.balance -= amount;
+        this.balance -= amount; // Update the balance locally
+        // Make call to the central bank database to update the balance in the database
         return this.balance;
     }
 

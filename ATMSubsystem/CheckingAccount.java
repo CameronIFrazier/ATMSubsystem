@@ -1,11 +1,13 @@
 package ATMSubsystem;
 
+import java.util.Date;
+
 public class CheckingAccount extends Account {
     private Card debitCard;
     private double overdraftLimit;
 
-    public CheckingAccount(int id, double balance, int status, Bank bank, Card debitCard, double overdraftLimit) {
-        super(id, balance, status, bank);
+    public CheckingAccount(int id, double balance, Date createDate, int status, Card debitCard, double overdraftLimit) {
+        super(id, balance, createDate, status);
         this.debitCard = debitCard;
         this.overdraftLimit = overdraftLimit;
     }

@@ -7,13 +7,13 @@ public class Transaction {
     }
 
     private final int transactionId;
-    private final String accountId;
+    private final int accountId;
     private final long timestamp;
     private final double amount;
     private final TransactionType type; // Possible types WITHDRAWAL, DEPOSIT, TRANSFER
     private int status;
 
-    public Transaction(String accountId, TransactionType type, long timestamp, double amount, int status) {
+    public Transaction(int accountId, TransactionType type, long timestamp, double amount, int status) {
         // New transaction
         this.transactionId = 0; // Generate a unique transaction ID
         this.accountId = accountId;
@@ -24,7 +24,7 @@ public class Transaction {
         // Insert new transaction into bank database
     }
 
-    public Transaction(int transactionId, String accountId, TransactionType type, long timestamp, double amount, int status) {
+    public Transaction(int transactionId, int accountId, TransactionType type, long timestamp, double amount, int status) {
         // Existing transaction
         this.transactionId = transactionId;
         this.accountId = accountId;
@@ -38,7 +38,7 @@ public class Transaction {
         return this.transactionId;
     }
 
-    public String getAccountId() {
+    public int getAccountId() {
         return this.accountId;
     }
 

@@ -6,11 +6,11 @@ public class Bank {
     private static final String BANK_PHONE = "(909) 869-7659";
 
     private int branchId;
-    private String branchLocation;
+    private String branchAddress;
 
-    public Bank(int branchId, String branchLocation) {
+    public Bank(int branchId, String branchAddress) {
         this.branchId = branchId;
-        this.branchLocation = branchLocation;
+        this.branchAddress = branchAddress;
     }
 
     public String getBankName() {
@@ -29,7 +29,7 @@ public class Bank {
         return this.branchId;
     }
 
-    public String getBranchLocation() {
-        return this.branchLocation;
+    public String getBranchAddress() {
+        return this.branchAddress;
     }
 }

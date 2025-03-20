@@ -8,6 +8,8 @@ public class Bank {
     public String name;
     public String location;
     public List<Account> accounts;
+    public List<ATM> atms;
+    public List<Bank> banks;
 
     public Bank(int id, String name, String location) {
         this.bankId = id;
@@ -46,5 +48,29 @@ public class Bank {
 
     public List<Account> getAccounts() {
         return this.accounts;
+    }
+
+    public void addATM(ATM atm) {
+        this.atms.add(atm);
+    }
+
+    public void removeATM(ATM atm) {
+        this.atms.remove(atm);
+    }
+
+    public List<ATM> getATMs() {
+        return this.atms;
+    }
+
+    public void addBank(Bank bank) {
+        this.banks.add(bank);
+    }
+
+    public void removeBank(Bank bank) {
+        this.banks.remove(bank);
+    }
+
+    public List<Bank> getBanks() {
+        return this.banks;
     }
 }

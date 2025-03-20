@@ -43,4 +43,9 @@ public class ATM {
     public void checkBalance() {
         // Display the balance of the session customer
     }
+
+    public void authenticateUser(int accountNumber, int pinCode) {
+        // Check if the account number and pin code are valid
+        // If true, start a new session
+    }
 }

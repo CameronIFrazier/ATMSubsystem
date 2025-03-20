@@ -25,6 +25,10 @@ public class Account {
         return this.balance;
     }
 
+    public double checkBalance() {
+        return this.balance;
+    }
+
     public double deposit(double amount) {
         this.balance += amount;
         return this.balance;
@@ -41,6 +45,18 @@ public class Account {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public void depositAmount(double amount) {
+        // Deposit the amount into the account
+    }
+
+    public void withdrawAmount(double amount) {
+        // Withdraw the amount from the account
+    }
+
+    public void transferAmount(double amount, int accountNumber) {
+        // Transfer the amount to the account number
     }
 
     

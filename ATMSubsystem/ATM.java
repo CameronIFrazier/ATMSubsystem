@@ -28,6 +28,16 @@ public class ATM {
         this.printer = new Printer();
     }
 
+    public void credit(double amount) {
+        // Update central bank database with the amount deposited
+        this.cashBalance += amount;
+    }
+
+    public void debit(double amount) {
+        // Update central bank database with the amount withdrawn
+        this.cashBalance -= amount;
+    }
+
     public void start() {
         while(true) {
             // ATM is running

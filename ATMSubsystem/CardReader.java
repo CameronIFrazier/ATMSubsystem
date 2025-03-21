@@ -4,7 +4,7 @@ public class CardReader {
 
     // Mimicks the hardware controller for the ATM's card reader.
 
-    public Card readCard() {
+    public static Card readCard() {
         Card card = null;
         // Mimick reading card from the physical ATM machine.
         // Physical card reader hardware reads the inserted card's chip and queries the 

@@ -1,4 +1,4 @@
-package ATMSubsystem;
+package atm_sub_system.ATMSubsystem; // changed 
 
 public class CheckingAccount extends Account {
     private Card debitCard;

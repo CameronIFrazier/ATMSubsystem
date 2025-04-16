@@ -20,4 +20,9 @@ public class SecondaryController {
         App.setRoot("depositScreen");
     }
 
+    @FXML
+    private void switchToWithdrawlScreen() throws IOException {
+        App.setRoot("withdrawlScreen");
+    }
+
 }
